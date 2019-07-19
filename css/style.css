@@ -2,3 +2,6 @@
 .navbar-nav a:hover {
   color: #28a745 !important;
 }
+.navbar-toggler-icon:hover {
+  color: #28a745 !important;
+}
