@@ -2,3 +2,7 @@
 .navbar-nav a:hover {
   color: #28a745 !important;
 }
+
+button a{
+  color: #fff;
+}
