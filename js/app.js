@@ -9,13 +9,15 @@ if ("serviceWorker" in navigator) {
 const getFormData = () => {
   let orderItem = document.getElementById("orderItem").value;
   let orderLocale = document.getElementById("locale").value;
-  let orderBtn = `<button onclick="getFormData()" type="button" class="btn btn-success btn-sm"> <a  href="sms://08097463636?body=I want to Order: ${orderItem} Location: ${orderLocale}">Text Now!   </a> </button>`;
-  document.getElementById("order").innerHTML = orderBtn;
+  // let orderBtn = `sms://08097463636?body=I want to Order: ${orderItem} Location: ${orderLocale}`;
+  document.getElementById(
+    "txr"
+  ).href = `sms://08097463636?body=I want to Order: ${orderItem} Location: ${orderLocale}`;
   document.getElementById("orderItem").value = "";
   document.getElementById("locale").value = "";
   console.log(orderItem, orderLocale);
 };
-getFormData();
+
 const addData = () => {
   getFormData();
 };
