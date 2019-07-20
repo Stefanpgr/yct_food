@@ -6,27 +6,30 @@ if ("serviceWorker" in navigator) {
   });
 }
 
-// function order() {
-//   let num = 0705463667;
-//   let inj = `<a href="sms://${num}?body=I want to order..."class="btn btn-primary">Go somewhere</a>`;
-//   const myFunction = () => {
-//     document.getElementById("add_message").innerHTML = inj;
-//   };
-//   myFunction();
-// }
-// let btnContainer = document.getElementById("navbar-nav");
+const getFormData = () => {
+  let orderItem = document.getElementById("orderItem").value;
+  let orderLocale = document.getElementById("locale").value;
+  let orderBtn = `<a href="sms://08097463636?body=I want to Order: ${orderItem} Location: ${orderLocale}"><button onclick="getFormData()"  type="button" class="btn btn-success btn-sm">
+              Text Now!
+            </button></a>`;
+  document.getElementById("order").innerHTML = orderBtn;
+  document.getElementById("orderItem").value = "";
+  document.getElementById("locale").value = "";
+  console.log(orderItem, orderLocale);
+};
 
-// // Get all buttons with class="btn" inside the container
-// var btns = btnContainer.getElementsByClassName("nav-item");
+const item1 = () => {
+  let title = document.getElementById("item1").textContent;
+  document.getElementById("title").innerHTML = title;
+  getFormData();
+};
 
-// // Loop through the buttons and add the active class to the current/clicked button
-// for (var i = 0; i < btns.length; i++) {
-//   btns[i].addEventListener("click", function() {
-//     var current = document.getElementsByClassName("active");
-//     current[0].className = current[0].className.replace(" active", "");
-//     this.className += " active";
-//   });
-// }
+const item2 = () => {
+  let title = document.getElementById("item2").textContent;
+  document.getElementById("title").innerHTML = title;
+  getFormData();
+};
+// test();
 $(document).ready(function() {
   $("div a").click(function() {
     $("div a").removeClass("active");

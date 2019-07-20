@@ -39,12 +39,6 @@
   </head>
 
   <body>
-    <!-- <div class="text-center">
-      <a href="index.html" class="image-responsive mb-4"
-        ><img src="img/bg.png" class="img-fluid" alt=""
-      /></a>
-    </div> -->
-
     <div>
       <nav
         class="navbar navbar-expand-md navbar-light bg-light shadow-sm sticky-top"
@@ -64,11 +58,7 @@
             <a href="/" class="nav-item nav-link active">Home</a>
             <a href="about.html" class="nav-item nav-link">About</a>
             <a href="contact.html" class="nav-item nav-link">Contact</a>
-            <!-- <a href="#" class="nav-item nav-link disabled" tabindex="-1">Reports</a> -->
           </div>
-          <!-- <div class="navbar-nav ml-auto">
-          <a href="#" class="nav-item nav-link">Login</a>
-        </div> -->
         </div>
       </nav>
 
@@ -88,16 +78,22 @@
                 alt="Card image cap"
               />
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title" id="item1">Iya Ola</h5>
+
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
-                <a
-                  href="sms://0705463667?body=I want to order..."
+
+                <button
+                  onclick="item1()"
                   class="btn btn-outline-success btn-sm"
-                  >Order Now</a
+                  type="button"
+                  data-toggle="modal"
+                  data-target="#orderModal"
                 >
+                  Order Now!
+                </button>
               </div>
             </div>
           </div>
@@ -109,107 +105,75 @@
                 alt="Card image cap"
               />
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title" id="item2">Iya Zainab</h5>
                 <p class="card-text">
                   Some quick example text to build on the card title and make up
                   the bulk of the card's content.
                 </p>
-                <a
-                  href="sms://0705463667?body=I want to order..."
+
+                <button
+                  onclick="item2()"
                   class="btn btn-outline-success btn-sm"
-                  >Order Now</a
+                  type="button"
+                  data-toggle="modal"
+                  data-target="#orderModal"
                 >
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="card mb-4">
-              <img
-                class="card-img-top"
-                src="//placeimg.com/290/180/any"
-                alt="Card image cap"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a
-                  href="sms://0705463667?body=I want to order..."
-                  class="btn btn-outline-success btn-sm"
-                  >Order Now</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="card mb-4">
-              <img
-                class="card-img-top"
-                src="//placeimg.com/290/180/any"
-                alt="Card image cap"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a
-                  href="sms://0705463667?body=I want to order..."
-                  class="btn btn-outline-success btn-sm"
-                  >Order Now</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="card mb-4">
-              <img
-                class="card-img-top"
-                src="//placeimg.com/290/180/any"
-                alt="Card image cap"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a
-                  href="sms://0705463667?body=I want to order..."
-                  class="btn btn-outline-success btn-sm"
-                  >Order Now</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="card mb-4">
-              <img
-                class="card-img-top"
-                src="//placeimg.com/290/180/any"
-                alt="Card image cap"
-              />
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-                <a
-                  href="sms://0705463667?body=I want to order..."
-                  class="btn btn-outline-success btn-sm"
-                  >Order Now</a
-                >
+                  Order Now!
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="orderModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="title"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="title"></h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="formGroupExampleInput">Order</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="orderItem"
+                  placeholder="rice 100, beans 100, 1 meat"
+                />
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput2">Location</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="locale"
+                  placeholder="SMBS 2A"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer" id="order"></div>
+        </div>
+      </div>
+    </div>
     <script src="js/app.js"></script>
 
     <footer class="page-footer font-small mdb-color lighten-3 pt-4">
