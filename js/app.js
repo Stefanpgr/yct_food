@@ -13,8 +13,8 @@ const getFormData = () => {
               Text Now!
             </button></a>`;
   document.getElementById("order").innerHTML = orderBtn;
-  document.getElementById("orderItem").value = "2";
-  document.getElementById("locale").value = "1";
+  // document.getElementById("orderItem").value = "2";
+  // document.getElementById("locale").value = "1";
   console.log(orderItem, orderLocale);
 };
 
