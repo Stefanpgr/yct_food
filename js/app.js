@@ -32,9 +32,9 @@ const item2 = () => {
   getFormData();
 };
 // test();
-$(document).ready(function() {
-  $("div a").click(function() {
-    $("div a").removeClass("active");
-    $(this).addClass("active");
-  });
-});
+// $(document).ready(function() {
+//   $("div a").click(function() {
+//     $("div a").removeClass("active");
+//     $(this).addClass("active");
+//   });
+// });
