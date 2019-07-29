@@ -33,8 +33,8 @@ const item2 = () => {
 };
 // test();
 // $(document).ready(function() {
-//   $("div a").click(function() {
-//     $("div a").removeClass("active");
+//   $("nav div > div > a").click(function() {
+//     $("nav div > div > a").removeClass("active");
 //     $(this).addClass("active");
 //   });
 // });
