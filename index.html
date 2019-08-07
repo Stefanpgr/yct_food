@@ -63,6 +63,21 @@
       </nav>
 
       <div class="container">
+        <div class="dropdown mt-4 sticky-top">
+          <button
+            type="button"
+            class="btn btn-primary dropdown-toggle"
+            data-toggle="dropdown"
+          >
+            Dropdown button
+          </button>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item" href="#">Link 1</a>
+            <a class="dropdown-item" href="#">Link 2</a>
+            <a class="dropdown-item" href="#">Link 3</a>
+          </div>
+        </div>
+
         <div class="jumbotron mt-4">
           <h1>YCT FOODS!</h1>
           <p class="lead">
@@ -125,59 +140,60 @@
           </div>
         </div>
       </div>
-    </div>
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="orderModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="title"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="title"></h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <label for="formGroupExampleInput">Order</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="orderItem"
-                  placeholder="rice 100, beans 100, 1 meat"
-                />
-              </div>
-              <div class="form-group">
-                <label for="formGroupExampleInput2">Location</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="locale"
-                  placeholder="SMBS 2A"
-                />
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer" id="order">
-            <a
-              id="txr"
-              onclick="getFormData()"
-              class="btn btn-success btn-sm"
-              href="#"
-              >Text Now!
-            </a>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="orderModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="title"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="title"></h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="formGroupExampleInput">Order</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="orderItem"
+                    placeholder="rice 100, beans 100, 1 meat"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Location</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="locale"
+                    placeholder="SMBS 2A"
+                  />
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer" id="order">
+              <a
+                id="txr"
+                onclick="getFormData()"
+                class="btn btn-success btn-sm"
+                href="#"
+                >Text Now!
+              </a>
+            </div>
           </div>
         </div>
       </div>

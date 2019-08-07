@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="Yabatech Online Food Vendor" />
+    <title>YCT FOOD</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#28a745" />
+    <!-- seo -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yctfoods.netlify.com" />
+    <meta property="og:title" content="YCT Foods" />
+    <meta property="og:image" content="img/favicon.png" />
+    <meta property="og:description" content="Order food Anywhere in school!" />
+    <meta property="og:site_name" content="YCT Foods" />
+
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#28a745" />
+  </head>
+
+  <body>
+    <div>
+      <nav
+        class="navbar navbar-expand-md navbar-light bg-light shadow-sm sticky-top"
+      >
+        <a href="/" class="navbar-brand"><img src="img/bg.png" alt=""/></a>
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-toggle="collapse"
+          data-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav text-center">
+            <a href="/" class="nav-item nav-link active">Home</a>
+            <a href="about.html" class="nav-item nav-link">About</a>
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="dropdown mt-4 sticky-top">
+          <button
+            type="button"
+            class="btn btn-primary dropdown-toggle"
+            data-toggle="dropdown"
+          >
+            Dropdown button
+          </button>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a class="dropdown-item" href="#">Link 1</a>
+            <a class="dropdown-item" href="#">Link 2</a>
+            <a class="dropdown-item" href="#">Link 3</a>
+          </div>
+        </div>
+
+        <div class="jumbotron mt-4">
+          <h1>YCT FOODS!</h1>
+          <p class="lead">
+            Order for food anywhere in school! 😋🍔🍰🍕
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="card mb-4 shadow-lg">
+              <img
+                class="card-img-top"
+                src="https://res.cloudinary.com/stefanpgr/image/upload/v1563663529/Nigerian-Fried-Beans-Photo-Attributed-to-Author-benketaro.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title" id="item1">Premium Beans</h5>
+
+                <p class="card-text">
+                  We sell beans, bread and plantain. order the quantity you want
+                  with the price and we will deliver to you ASAP!.
+                </p>
+
+                <button
+                  onclick="item1()"
+                  class="btn btn-outline-success btn-sm"
+                  type="button"
+                  data-toggle="modal"
+                  data-target="#orderModal"
+                >
+                  Order Now!
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- second card -->
+          <div class="col-sm-4">
+            <div class="card mb-4 shadow-lg">
+              <img
+                class="card-img-top"
+                src="https://res.cloudinary.com/stefanpgr/image/upload/v1563664456/maxresdefault.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title" id="item2">Bukola's Kitchen</h5>
+                <p class="card-text">
+                  Want a tasty quality food with adequate quantity? Order from
+                  us now! we provide the best rice and chicken in school.
+                </p>
+
+                <button
+                  onclick="item2()"
+                  class="btn btn-outline-success btn-sm"
+                  type="button"
+                  data-toggle="modal"
+                  data-target="#orderModal"
+                >
+                  Order Now!
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- third card-->
+          <div class="col-sm-4">
+            <div class="card mb-4 shadow-lg">
+              <img
+                class="card-img-top"
+                src="https://res.cloudinary.com/stefanpgr/image/upload/v1563664456/maxresdefault.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title" id="item2">Bukola's Kitchen</h5>
+                <p class="card-text">
+                  Want a tasty quality food with adequate quantity? Order from
+                  us now! we provide the best rice and chicken in school.
+                </p>
+
+                <button
+                  onclick="item2()"
+                  class="btn btn-outline-success btn-sm"
+                  type="button"
+                  data-toggle="modal"
+                  data-target="#orderModal"
+                >
+                  Order Now!
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- fourth -->
+          <div class="col-sm-4">
+            <div class="card mb-4 shadow-lg">
+              <img
+                class="card-img-top"
+                src="https://res.cloudinary.com/stefanpgr/image/upload/v1563664456/maxresdefault.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title" id="item2">Bukola's Kitchen</h5>
+                <p class="card-text">
+                  Want a tasty quality food with adequate quantity? Order from
+                  us now! we provide the best rice and chicken in school.
+                </p>
+
+                <button
+                  onclick="item2()"
+                  class="btn btn-outline-success btn-sm"
+                  type="button"
+                  data-toggle="modal"
+                  data-target="#orderModal"
+                >
+                  Order Now!
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- fifth -->
+          <div class="col-sm-4">
+            <div class="card mb-4 shadow-lg">
+              <img
+                class="card-img-top"
+                src="https://res.cloudinary.com/stefanpgr/image/upload/v1563664456/maxresdefault.jpg"
+                alt="Card image cap"
+              />
+              <div class="card-body">
+                <h5 class="card-title" id="item2">Bukola's Kitchen</h5>
+                <p class="card-text">
+                  Want a tasty quality food with adequate quantity? Order from
+                  us now! we provide the best rice and chicken in school.
+                </p>
+
+                <button
+                  onclick="item2()"
+                  class="btn btn-outline-success btn-sm"
+                  type="button"
+                  data-toggle="modal"
+                  data-target="#orderModal"
+                >
+                  Order Now!
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="orderModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="title"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="title"></h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="formGroupExampleInput">Order</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="orderItem"
+                    placeholder="rice 100, beans 100, 1 meat"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Location</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="locale"
+                    placeholder="SMBS 2A"
+                  />
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer" id="order">
+              <a
+                id="txr"
+                onclick="getFormData()"
+                class="btn btn-success btn-sm"
+                href="#"
+                >Text Now!
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/app.js"></script>
+
+    <footer class="page-footer font-small mdb-color lighten-3 pt-4">
+      <div class="footer-copyright text-center py-3">
+        © 2019 Copyright:
+        <a href="https://yctfoods.netlify.com"> YCTfoods.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+  </body>
+</html>
