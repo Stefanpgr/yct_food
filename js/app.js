@@ -11,7 +11,8 @@ const numObj = {
   adex: " 08037863809",
   sam: "08135053968",
   ff: "08130845097",
-  bukola: "08035062445"
+  bukola: "08035062445",
+  ewaNaB: "08165018330"
 };
 
 // console.log(vendorNum[0]);
@@ -71,7 +72,7 @@ const item3 = () => {
 const item4 = () => {
   let title = document.getElementById("item4").textContent; // collects card title
   document.getElementById("title").innerHTML = title; //modal title
-  vendorNum = Number(numObj.ff);
+  vendorNum = Number(numObj.sam);
   getFormData(vendorNum);
 
   return vendorNum;
@@ -81,7 +82,16 @@ const item5 = () => {
   let title = document.getElementById("item5").textContent; // collects card title
   document.getElementById("title").innerHTML = title; //modal title
   getFormData();
-  vendorNum = Number(numObj.sam);
+  vendorNum = Number(numObj.ewaNaB);
+  getFormData(vendorNum);
+
+  return vendorNum;
+};
+const item6 = () => {
+  let title = document.getElementById("item6").textContent; // collects card title
+  document.getElementById("title").innerHTML = title; //modal title
+  getFormData();
+  vendorNum = Number(numObj.ff);
   getFormData(vendorNum);
 
   return vendorNum;
