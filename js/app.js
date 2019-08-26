@@ -24,7 +24,7 @@ const getFormData = () => {
   const isInvalid = "";
   console.log(typeof orderItem);
   // let orderBtn = `sms://08097463636?body=I want to Order: ${orderItem} Location: ${orderLocale}`;
-  if (orderItem === isInvalid) {
+  if ((orderItem && orderLocale) === isInvalid) {
     alert("invalid input, Pls check input fields");
   } else {
     document.getElementById(
@@ -45,8 +45,6 @@ const item1 = () => {
   let title = document.getElementById("item1").textContent;
   document.getElementById("title").innerHTML = title;
   vendorNum = Number(numObj.nikki);
-  // getFormData(vendorNum);
-
   return vendorNum;
 };
 
@@ -54,26 +52,13 @@ const item2 = () => {
   let title = document.getElementById("item2").textContent; // collects card title
   document.getElementById("title").innerHTML = title; //modal title
   vendorNum = Number(numObj.adex);
-  getFormData(vendorNum);
-
   return vendorNum;
 };
-// console.log(num);
-// const item2 = () => {
-//   let title = document.getElementById("item2").textContent; // collects card title
-//   document.getElementById("title").innerHTML = title; //modal title
-//   const vendorNum = numObj.adex;
-//   getFormData(vendorNum);
 
-//   return vendorNum;
-// };
-// console.log(vendorNum, "item2", item2());
 const item3 = () => {
   let title = document.getElementById("item3").textContent; // collects card title
   document.getElementById("title").innerHTML = title; //modal title
   vendorNum = Number(numObj.bukola);
-  getFormData(vendorNum);
-
   return vendorNum;
 };
 
@@ -81,8 +66,6 @@ const item4 = () => {
   let title = document.getElementById("item4").textContent; // collects card title
   document.getElementById("title").innerHTML = title; //modal title
   vendorNum = Number(numObj.sam);
-  getFormData(vendorNum);
-
   return vendorNum;
 };
 
@@ -91,8 +74,6 @@ const item5 = () => {
   document.getElementById("title").innerHTML = title; //modal title
   getFormData();
   vendorNum = Number(numObj.ewaNaB);
-  getFormData(vendorNum);
-
   return vendorNum;
 };
 const item6 = () => {
@@ -100,16 +81,8 @@ const item6 = () => {
   document.getElementById("title").innerHTML = title; //modal title
   getFormData();
   vendorNum = Number(numObj.ff);
-  getFormData(vendorNum);
-
   return vendorNum;
 };
-// if (item1) {
-//   vendorNum = numObj.nikki;
-// } else if (item2) {
-//   vendorNum = numObj.adex;
-// }
-// console.log(vendorNum, "he");
 
 // test();
 // $(document).ready(function() {
