@@ -17,18 +17,26 @@ const numObj = {
 
 // console.log(vendorNum[0]);
 const getFormData = () => {
-  console.log(vendorNum, "check");
-  let orderItem = document.getElementById("orderItem").value;
-  let orderLocale = document.getElementById("locale").value;
+  // console.log(vendorNum, "check");
+  const orderItem = document.getElementById("orderItem").value;
+  const orderLocale = document.getElementById("locale").value;
 
+  const isInvalid = "";
+  console.log(typeof orderItem);
   // let orderBtn = `sms://08097463636?body=I want to Order: ${orderItem} Location: ${orderLocale}`;
-  document.getElementById(
-    "txr"
-  ).href = `sms://${vendorNum}?body=I want to Order: ${orderItem} Location: ${orderLocale}`;
-  document.getElementById("orderItem").value = "";
-  document.getElementById("locale").value = "";
-  console.log(orderItem, orderLocale);
+  if (orderItem === isInvalid) {
+    alert("invalid input, Pls check input fields");
+  } else {
+    document.getElementById(
+      "txr"
+    ).href = `sms://${vendorNum}?body=I want to Order: ${orderItem} Location: ${orderLocale}`;
+    console.log(orderItem, orderLocale);
+    document.getElementById("orderItem").value = "";
+    document.getElementById("locale").value = "";
+  }
 };
+
+const valid = () => {};
 
 const addData = () => {
   getFormData();
@@ -37,7 +45,7 @@ const item1 = () => {
   let title = document.getElementById("item1").textContent;
   document.getElementById("title").innerHTML = title;
   vendorNum = Number(numObj.nikki);
-  getFormData(vendorNum);
+  // getFormData(vendorNum);
 
   return vendorNum;
 };
