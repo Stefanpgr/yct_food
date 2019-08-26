@@ -72,14 +72,13 @@ const item4 = () => {
 const item5 = () => {
   let title = document.getElementById("item5").textContent; // collects card title
   document.getElementById("title").innerHTML = title; //modal title
-  getFormData();
   vendorNum = Number(numObj.ewaNaB);
   return vendorNum;
 };
+
 const item6 = () => {
   let title = document.getElementById("item6").textContent; // collects card title
   document.getElementById("title").innerHTML = title; //modal title
-  getFormData();
   vendorNum = Number(numObj.ff);
   return vendorNum;
 };
