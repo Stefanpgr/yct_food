@@ -30,7 +30,7 @@ const getFormData = () => {
   }
 
   if (orderLocale === isInvalid) {
-    alert("invalid input, Pls check input fields");
+    invalidInput();
   } else if (selectedSwal) {
     document.getElementById(
       "txr"
@@ -135,10 +135,13 @@ const item6 = () => {
   return vendorNum;
 };
 
-// test();
-// $(document).ready(function() {
-//   $("nav div > div > a").click(function() {
-//     $("nav div > div > a").removeClass("active");
-//     $(this).addClass("active");
-//   });
-// });
+let invalidInput = alertWarn => {
+  alertWarn = document.getElementById("is-invalid");
+  alertWarn.innerHTML = `<div class='alert alert-warning alert-dismissible fade show'
+  role="alert">
+    Pls check input fields!
+  <button type='button' class='close' data-dismiss='alert' arial-label='Close'>
+    <span aria-hidden='true'>&times;</span>
+  </button>
+  </div>`;
+};
