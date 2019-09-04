@@ -14,7 +14,12 @@ const numObj = {
   bukola: "08035062445",
   ewaNaB: "08165018330"
 };
-
+qty = document.getElementById("qty");
+output = document.getElementById("sliderShow");
+output.innerHTML = qty.value;
+qty.oninput = function() {
+  output.innerHTML = this.value;
+};
 const show = () => {
   document.getElementById("selectQty").style.display = "block";
 };
@@ -36,11 +41,11 @@ const getFormData = () => {
     alert("check input fields");
   } else if (selectedSwal) {
     qty = document.getElementById("qty");
-    output = document.getElementById("sliderShow");
-    output.innerHTML = qty.value;
-    qty.oninput = function() {
-      output.innerHTML = this.value;
-    };
+    // output = document.getElementById("sliderShow");
+    // output.innerHTML = qty.value;
+    // qty.oninput = function() {
+    //   output.innerHTML = this.value;
+    // };
     document.getElementById(
       "txr"
     ).href = `sms://${vendorNum}?body=Order: ${selectedItem} and ${selectedSwal.value}, Qty:${qty.value} Location: ${orderLocale}`;
