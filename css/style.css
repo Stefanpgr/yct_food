@@ -11,3 +11,32 @@ img,
 .card-img-top {
   border: none;
 }
+
+.tag {
+  padding: 1px 10px;
+  font-size: 12px;
+  font-weight: 400;
+  border-radius: 10px;
+  background-color: #eee;
+  color: #212121;
+  display: inline-block;
+  margin: 2px 5px;
+  }
+  .warning-color {
+      color: #856404;
+      background-color: #ffeeba;
+  }
+
+  .success-color{
+    background-color:#28a745 !important;
+  
+  }
+  .hoverable, .tag {
+  transition: box-shadow 0.55s;
+  box-shadow: 0;
+  }
+  
+  .hoverable:hover, .tag:hover {
+  transition: box-shadow 0.45s;
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
