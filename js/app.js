@@ -15,6 +15,9 @@ const numObj = {
   ewaNaB: "08165018330"
 };
 
+const show = () => {
+  document.getElementById("selectQty").style.display = "block";
+};
 // console.log(vendorNum[0]);
 const getFormData = () => {
   const orderLocale = document.getElementById("locale").value;
@@ -26,15 +29,21 @@ const getFormData = () => {
 
   selectedSwal = document.querySelector("input[name='swal']:checked");
   if (selectedSwal) {
-    console.log(selectedSwal.value);
+    console.log(selectedSwal.value, "first");
   }
 
   if (orderLocale === isInvalid) {
     alert("check input fields");
   } else if (selectedSwal) {
+    qty = document.getElementById("qty");
+    output = document.getElementById("sliderShow");
+    output.innerHTML = qty.value;
+    qty.oninput = function() {
+      output.innerHTML = this.value;
+    };
     document.getElementById(
       "txr"
-    ).href = `sms://${vendorNum}?body=Order: ${selectedItem} and ${selectedSwal.value} Location: ${orderLocale}`;
+    ).href = `sms://${vendorNum}?body=Order: ${selectedItem} and ${selectedSwal.value}, Qty:${qty.value} Location: ${orderLocale}`;
     console.log(selectedItem, orderLocale);
 
     document.getElementById("locale").value = "";

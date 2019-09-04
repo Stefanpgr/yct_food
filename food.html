@@ -398,23 +398,28 @@
                 </div>
              <div class="form-inline">
                 <div class="custom-control custom-radio custom-control-inline mr-2">
-                  <input type="radio" id="customRadio1" name="swal" value="eba" class="custom-control-input">
+                  <input type="radio" id="customRadio1" onclick="show()" name="swal" value="eba" class="custom-control-input">
                   <label class="custom-control-label" for="customRadio1">Eba</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline mr-2">
-                  <input type="radio" id="customRadio2" name="swal" value="amala" class="custom-control-input">
+                  <input type="radio" id="customRadio2" onclick="show()" name="swal" value="amala" class="custom-control-input">
                   <label class="custom-control-label" for="customRadio2">Amala</label>
                 </div>
                 
                 <div class="custom-control custom-radio custom-control-inline mr-2">
-                  <input type="radio" id="customRadio3" name="swal" value="fufu" class="custom-control-input">
+                  <input type="radio" id="customRadio3" onclick="show()" name="swal" value="fufu" class="custom-control-input">
                   <label class="custom-control-label" for="customRadio3">fufu</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline mr-2">
-                  <input type="radio" id="customRadio4" name="swal" value="semo" class="custom-control-input">
+                  <input type="radio" id="customRadio4" onclick="show()" name="swal" value="semo" class="custom-control-input">
                   <label class="custom-control-label" for="customRadio4">Semo</label>
                 </div>
-                <!-- </div> -->
+                
+                </div>
+                <div id="selectQty" class="hide">
+                  
+                  <input type='range' class="custom-range mt-2" min="1" max="9" id='qty'>
+                  <p id="sliderShow">Quantity:</p>
                 </div>
                 <!-- <div class="form-check form-check-inline">
                   <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
