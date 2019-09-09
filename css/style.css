@@ -22,3 +22,10 @@ img,
 .modal-body {
   padding: 0.8rem;
 }
+
+.modal-header {
+  border-bottom: 1px solid #ddd;
+
+  text-align: center;
+  display: flex !important;
+}

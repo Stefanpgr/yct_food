@@ -25,7 +25,8 @@ const show = () => {
 };
 // console.log(vendorNum[0]);
 const getFormData = () => {
-  const orderLocale = document.getElementById("locale").value;
+  const orderLocale = document.getElementById("locale");
+  console.log(document.querySelector("[location]"), "hehehe");
   select = document.getElementById("menuItemList");
   const selectedItem = select.options[select.selectedIndex].text;
   console.log(selectedItem);
@@ -33,32 +34,25 @@ const getFormData = () => {
   const isInvalid = "";
 
   selectedSwal = document.querySelector("input[name='swal']:checked");
-  if (selectedSwal) {
-    console.log(selectedSwal.value, "first");
-  }
-
-  if (orderLocale === isInvalid) {
-    alert("check input fields");
+  console.log(selectedSwal, "bool");
+  if (orderLocale.value === isInvalid) {
+    return document.querySelector("[location]").classList.add("has-danger");
   } else if (selectedSwal) {
     qty = document.getElementById("qty");
-    // output = document.getElementById("sliderShow");
-    // output.innerHTML = qty.value;
-    // qty.oninput = function() {
-    //   output.innerHTML = this.value;
-    // };
+
     document.getElementById(
       "txr"
     ).href = `sms://${vendorNum}?body=Order: ${selectedItem} and ${selectedSwal.value}, Qty:${qty.value} Location: ${orderLocale}`;
-    console.log(selectedItem, orderLocale);
+    console.log(selectedItem, orderLocale.value);
 
-    document.getElementById("locale").value = "";
+    orderLocale.value = "";
   } else {
     document.getElementById(
       "txr"
     ).href = `sms://${vendorNum}?body=Order: ${selectedItem} Location: ${orderLocale}`;
     console.log(selectedItem, orderLocale);
 
-    document.getElementById("locale").value = "";
+    orderLocale.value = "";
   }
 };
 
