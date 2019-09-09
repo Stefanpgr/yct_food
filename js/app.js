@@ -34,7 +34,7 @@ const getFormData = () => {
   const isInvalid = "";
 
   selectedSwal = document.querySelector("input[name='swal']:checked");
-  console.log(selectedSwal, "bool");
+  console.log(orderLocale.value, "bool");
   if (orderLocale.value === isInvalid) {
     return document.querySelector("[location]").classList.add("has-danger");
   } else if (selectedSwal) {
@@ -42,17 +42,17 @@ const getFormData = () => {
 
     document.getElementById(
       "txr"
-    ).href = `sms://${vendorNum}?body=Order: ${selectedItem} and ${selectedSwal.value}, Qty:${qty.value} Location: ${orderLocale}`;
+    ).href = `sms://${vendorNum}?body=Order: ${selectedItem} and ${selectedSwal.value}, Qty:${qty.value} Location: ${orderLocale.value}`;
     console.log(selectedItem, orderLocale.value);
-
-    orderLocale.value = "";
+    document.querySelector("[location]").classList.remove("has-danger");
+    return (orderLocale.value = "");
   } else {
     document.getElementById(
       "txr"
-    ).href = `sms://${vendorNum}?body=Order: ${selectedItem} Location: ${orderLocale}`;
+    ).href = `sms://${vendorNum}?body=Order: ${selectedItem} Location: ${orderLocale.value}`;
     console.log(selectedItem, orderLocale);
-
-    orderLocale.value = "";
+    document.querySelector("[location]").classList.remove("has-danger");
+    return (orderLocale.value = "");
   }
 };
 
