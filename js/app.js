@@ -37,7 +37,10 @@ const getFormData = () => {
   selectedSwal = document.querySelector("input[name='swal']:checked");
   console.log(orderLocale.value, "bool");
   if (orderLocale.value === isInvalid) {
-    return document.querySelector("[location]").classList.add("has-danger");
+    document.querySelector("[location]").classList.add("has-danger");
+    return setTimeout(() => {
+      document.querySelector("[location]").classList.remove("has-danger");
+    }, 1000);
   } else if (selectedSwal) {
     qty = document.getElementById("qty");
 
