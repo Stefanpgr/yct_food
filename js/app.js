@@ -32,6 +32,7 @@ const getFormData = () => {
   console.log(selectedItem);
   console.log(vendorNum);
   const isInvalid = "";
+  linkTexter = document.getElementById("txr");
 
   selectedSwal = document.querySelector("input[name='swal']:checked");
   console.log(orderLocale.value, "bool");
@@ -40,18 +41,16 @@ const getFormData = () => {
   } else if (selectedSwal) {
     qty = document.getElementById("qty");
 
-    document.getElementById(
-      "txr"
-    ).href = `sms://${vendorNum}?body=Order: ${selectedItem} and ${selectedSwal.value}, Qty:${qty.value} Location: ${orderLocale.value}`;
+    linkTexter.href = `sms://${vendorNum}?body=Order: ${selectedItem} and ${selectedSwal.value}, Qty:${qty.value} Location: ${orderLocale.value}`;
     console.log(selectedItem, orderLocale.value);
     document.querySelector("[location]").classList.remove("has-danger");
+    clearLink();
     return (orderLocale.value = "");
   } else {
-    document.getElementById(
-      "txr"
-    ).href = `sms://${vendorNum}?body=Order: ${selectedItem} Location: ${orderLocale.value}`;
+    linkTexter.href = `sms://${vendorNum}?body=Order: ${selectedItem} Location: ${orderLocale.value}`;
     console.log(selectedItem, orderLocale);
     document.querySelector("[location]").classList.remove("has-danger");
+    clearLink();
     return (orderLocale.value = "");
   }
 };
@@ -143,6 +142,14 @@ const item6 = () => {
   return vendorNum;
 };
 
+const clearLink = () => {
+  linkTexter = document.getElementById("txr");
+  setTimeout(() => {
+    if (linkTexter.href !== "#") {
+      linkTexter.href = "#";
+    }
+  }, 2000);
+};
 // let invalidInput = alertWarn => {
 //   alertWarn = document.getElementById("is-invalid");
 //   alertWarn.innerHTML = `<div class='alert alert-warning alert-dismissible fade show'
