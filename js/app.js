@@ -151,7 +151,7 @@ const clearLink = () => {
     if (linkTexter.href !== "#") {
       linkTexter.href = "#";
     }
-  }, 2000);
+  }, 200);
 };
 // let invalidInput = alertWarn => {
 //   alertWarn = document.getElementById("is-invalid");
