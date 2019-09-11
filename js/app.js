@@ -23,7 +23,7 @@ qty.oninput = function() {
 const show = () => {
   document.getElementById("selectQty").style.display = "block";
 };
-// console.log(vendorNum[0]);
+
 const getFormData = () => {
   const orderLocale = document.getElementById("locale");
   console.log(document.querySelector("[location]"), "hehehe");
@@ -46,13 +46,13 @@ const getFormData = () => {
 
     linkTexter.href = `sms://${vendorNum}?body=Order: ${selectedItem} and ${selectedSwal.value}, Qty:${qty.value} Location: ${orderLocale.value}`;
     console.log(selectedItem, orderLocale.value);
-    document.querySelector("[location]").classList.remove("has-danger");
+
     clearLink();
     return (orderLocale.value = "");
   } else {
     linkTexter.href = `sms://${vendorNum}?body=Order: ${selectedItem} Location: ${orderLocale.value}`;
     console.log(selectedItem, orderLocale);
-    document.querySelector("[location]").classList.remove("has-danger");
+
     clearLink();
     return (orderLocale.value = "");
   }
@@ -90,6 +90,7 @@ const item1 = () => {
   let ul = document.getElementById("menu1");
   removeMenuItems();
   createMenuItems(ul);
+  checkKeywords();
   return vendorNum;
 };
 
@@ -100,6 +101,7 @@ const item2 = () => {
   let ul = document.getElementById("menu2");
   removeMenuItems();
   createMenuItems(ul);
+  checkKeywords();
   return vendorNum;
 };
 
@@ -110,6 +112,7 @@ const item3 = () => {
   let ul = document.getElementById("menu3");
   removeMenuItems();
   createMenuItems(ul);
+  checkKeywords();
   return vendorNum;
 };
 
@@ -145,6 +148,37 @@ const item6 = () => {
   return vendorNum;
 };
 
+// This function checks if a select element contains the soup word so as to disable or enable related elements
+const checkKeywords = () => {
+  selectedOption = select.options[select.selectedIndex].text;
+
+  let arr = selectedOption.split(' ');
+ 
+  // if (selectedOption.match(regExptest)) {
+  //   console.log(true);
+  // } else {
+  //   console.log(false);
+  // }
+  // result = RegExp(/Soup/g).test(selectedOption);
+  document.getElementById("menuItemList").addEventListener(
+    "change", ()=> console.log(selectedOption),
+    false
+  );
+  // function testRegExp() {
+  //   if (result) {
+  //     document.querySelector("[radio1]").classList.remove("disabled");
+  //     document.querySelector("[radio2]").classList.remove("disabled");
+  //     document.querySelector("[radio3]").classList.remove("disabled");
+  //     document.querySelector("[radio4]").classList.remove("disabled");
+  //   } else {
+  //     document.querySelector("[radio1]").classList.add("disabled");
+  //     document.querySelector("[radio2]").classList.add("disabled");
+  //     document.querySelector("[radio3]").classList.add("disabled");
+  //     document.querySelector("[radio4]").classList.add("disabled");
+  //   }
+  // }
+};
+
 const clearLink = () => {
   linkTexter = document.getElementById("txr");
   setTimeout(() => {
@@ -153,13 +187,3 @@ const clearLink = () => {
     }
   }, 200);
 };
-// let invalidInput = alertWarn => {
-//   alertWarn = document.getElementById("is-invalid");
-//   alertWarn.innerHTML = `<div class='alert alert-warning alert-dismissible fade show'
-//   role="alert">
-//     Pls check input fields!
-//   <button type='button' class='close' data-dismiss='alert' arial-label='Close'>
-//     <span aria-hidden='true'>&times;</span>
-//   </button>
-//   </div>`;
-// };

@@ -10,7 +10,7 @@
     <title>YCT FOOD</title>
     <!--     Fonts and icons     -->
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://kit.fontawesome.com/f63b133d94.js"></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -94,7 +94,7 @@
         <li class="nav-item">
           <a class="nav-link" rel="tooltip" title="Contact Us" data-placement="bottom"
             href="contact.html">
-            <i class="fa fa-phone"></i>
+            <i class="fas fa-envelope-open-text"></i>
             <p class="d-lg-none">Contact</p>
           </a>
         </li>
@@ -178,6 +178,7 @@
                     <li class="list-group-item">Egusi Soup</li>
                     <li class="list-group-item">Ogbolo Soup</li>
                     <li class="list-group-item">Vegetable Soup</li>
+                    <li class="list-group-item">Vegetable</li>
                   </ul>
                 </div>
                 <button
@@ -459,29 +460,29 @@
                   </select>
                 </div>
              
-                <div class="form-check-radio form-check-inline mr-1">
+                <div class="form-check-radio form-check-inline mr-1" radio1>
                 
                   <label class="form-check-label" for="customRadio1">
                     <input type="radio" id="customRadio1" onclick="show()" name="swal" value="eba" class="form-check-input">
                     Eba <span class="form-check-sign"></span>
                   </label>
                 </div>
-                <div class="form-check-radio form-check-inline mr-1">
+                <div class="form-check-radio form-check-inline mr-1" radio2>
                   
-                  <label class="form-check-label" for="customRadio2">
+                  <label class="form-check-label" for="customRadio2" >
                     <input type="radio" id="customRadio2" onclick="show()" name="swal" value="amala" class="form-check-input">
                     Amala<span class="form-check-sign"></span>
                   </label>
                 </div>
-                
-                <div class="form-check-radio form-check-inline mr-1">
+               
+                <div class="form-check-radio form-check-inline mr-1" radio3>
                   
                   <label class="form-check-label" for="customRadio3">
                     <input type="radio" id="customRadio3" onclick="show()" name="swal" value="fufu" class="form-check-input">
                     fufu<span class="form-check-sign"></span>
                   </label>
                 </div>
-                <div class="form-check-radio form-check-inline mr-6">
+                <div class="form-check-radio form-check-inline mr-6" radio4>
                   
                   <label class="form-check-label" for="customRadio4">
                     <input type="radio" id="customRadio4" onclick="show()" name="swal" value="semo" class="form-check-input">
@@ -495,6 +496,7 @@
                   <input type='range' class="custom-range mt-2" min="1" max="9" id='qty'>
                   <p >Quantity: <span id="sliderShow"></span></p>
                 </div>
+                
                 <!-- <div class="form-check form-check-inline">
                   <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
                   <label class="form-check-label" for="inlineCheckbox1">1</label>
