@@ -22,7 +22,9 @@ img,
 .modal-body {
   padding: 0.8rem;
 }
-
+footer a {
+  color: #28a745 !important;
+}
 .modal-header {
   border-bottom: 1px solid #ddd;
 
