@@ -15,10 +15,23 @@ img,
   display: none;
 }
 
+.badge-custom {
+  background-color: #fbc658;
+  color: black;
+}
+.badge {
+  padding: 0.4em 0.9em !important;
+}
 .navbar .navbar-collapse:after {
   background-color: #ffffff;
 }
-
+/* @media (min-width: 768px) {
+  .fa,
+  .fab,
+  .fas {
+    display: none;
+  }
+} */
 .modal-body {
   padding: 0.8rem;
 }
